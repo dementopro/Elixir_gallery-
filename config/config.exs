@@ -77,6 +77,8 @@ config :alzhmr_photo, Services.Airtable,
   api_key: "keyN7kPZVO7gOoIS4",
   base_id: "app1w7FgwDnM4CRP4",
   api_url: "https://api.airtable.com/v0/"
+  personal_access_token: "pat7AiQPUe5q7pPuZ.9a13a59a4e3de28e59dffec94153c0ca4dd0d385a3139d48eafa9c9eebc7d767"
+
 
   config :alzhmr_photo, AlzhmrPhoto.AirtableRepo, adapter: AlzhmrPhoto.AirtableRepo.Http
 

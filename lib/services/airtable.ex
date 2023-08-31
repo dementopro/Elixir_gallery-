@@ -10,7 +10,7 @@ defmodule Services.Airtable do
       {Tesla.Middleware.BaseUrl, api_url() <> base_id()},
       Tesla.Middleware.JSON,
       Tesla.Middleware.Logger,
-      {Tesla.Middleware.Headers, [{"authorization", "Bearer " <> api_key()}]}
+      {Tesla.Middleware.Headers, [{"authorization", "Bearer " <> personal_access_token()}]}
     ]
 
     Tesla.client(middleware)
@@ -37,5 +37,6 @@ defmodule Services.Airtable do
 
   defp base_id, do: Application.get_env(:alzhmr_photo, __MODULE__)[:base_id]
 
+  defp personal_access_token, do: Application.get_env(:mwcweb, __MODULE__)[:personal_access_token]
 
 end
