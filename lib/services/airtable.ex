@@ -33,10 +33,10 @@ defmodule Services.Airtable do
 
   defp api_url, do: Application.get_env(:alzhmr_photo, __MODULE__)[:api_url]
 
-  defp api_key, do: Application.get_env(:alzhmr_photo, __MODULE__)[:api_key]
+ # scott old defp api_key, do: Application.get_env(:alzhmr_photo, __MODULE__)[:api_key]
 
   defp base_id, do: Application.get_env(:alzhmr_photo, __MODULE__)[:base_id]
 
-  defp personal_access_token, do: Application.get_env(:mwcweb, __MODULE__)[:personal_access_token]
+  defp personal_access_token, do: Application.get_env(:alzhmr_photo, __MODULE__)[:personal_access_token]
 
 end
