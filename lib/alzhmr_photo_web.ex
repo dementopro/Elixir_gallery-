@@ -45,7 +45,7 @@ defmodule AlzhmrPhotoWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {AlzhmrPhotoWeb.LayoutView, "live.html"}
+        layout: {AlzhmrPhotoWeb.LayoutView, :live}
 
       unquote(view_helpers())
     end
@@ -93,7 +93,8 @@ defmodule AlzhmrPhotoWeb do
       import Phoenix.LiveView.Helpers
 
       # Import basic rendering functionality (render, render_layout, etc)
-      import Phoenix.View
+      # SCOTTT UPGRADE TO 1.7 import Phoenix.View
+      import Phoenix.Component
 
       import AlzhmrPhotoWeb.ErrorHelpers
       import AlzhmrPhotoWeb.Gettext

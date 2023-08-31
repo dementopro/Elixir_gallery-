@@ -14,10 +14,10 @@ import Config
 #config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint, cache_static_manifest: "priv/static/cache_manifest.json"
 config :alzhmr_photo, AlzhmrPhotoWeb.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "fix.modernwineclub.com", port: 443],
+  url: [scheme: "https", host: "alzhmr.fly.dev", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  check_origin: ["https://fux.modernwineclub.com","https://mwc-wine-blog.herokuapp.com" ]
+  check_origin: ["https://alzhmr.fly.dev" ]
 
 
 # Do not print debug messages in production
