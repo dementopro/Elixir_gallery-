@@ -26,6 +26,7 @@
               <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div class="rounded-md shadow">
                   <p><%= @article.description %></p>
+                  <p>Delaytime: <%= @article.delaytime %></p>
                 </div>
               </div>
             </div>

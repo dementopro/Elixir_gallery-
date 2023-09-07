@@ -27,6 +27,7 @@ defmodule AlzhmrPhoto.AirtableRepo.Http.Decoder do
       author: Map.get(fields, "author", ""),
       published_at: Date.from_iso8601!(Map.get(fields, "published_at"))
     }
+
   end
 
 
