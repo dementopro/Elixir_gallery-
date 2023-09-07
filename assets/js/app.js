@@ -64,3 +64,42 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+
+
+$(function(){
+  $(".next-btn").on('click', showNext);
+  $(".prev-btn").on('click', showPrevious);
+  setInterval(() => {
+    showNext();
+  }, 3000);
+})
+
+
+function showPrevious() {
+  let curr_article = $(".article-number.active");
+  let prev;
+  if (curr_article.is(":first-child")) {
+    prev = curr_article.closest(".columns").children().last();
+  }else {
+    prev = curr_article.prev();
+  }
+  curr_article.toggleClass("active");
+  curr_article.toggleClass("hidden");
+  $(prev).toggleClass("hidden");
+  $(prev).toggleClass("active");
+}
+
+
+function showNext() {
+  let curr_article = $(".article-number.active");
+  let next;
+  if (curr_article.is(":last-child")) {
+    next = curr_article.closest(".columns").children().first();
+  }else {
+    next = curr_article.next();
+  }
+  curr_article.toggleClass("active");
+  curr_article.toggleClass("hidden");
+  $(next).toggleClass("hidden");
+  $(next).toggleClass("active");
+}
