@@ -23,7 +23,7 @@ defmodule AlzhmrPhoto.AirtableRepo.Http.Decoder do
       image: decode_image(Map.get(fields, "image")),
       content: Map.get(fields, "content", ""),
       contenttype: Map.get(fields, "contenttype", ""),
-      title: Map.get(fields, "delaytime", ""),
+      delaytime: Map.get(fields, "delaytime", ""),
       author: Map.get(fields, "author", ""),
       published_at: Date.from_iso8601!(Map.get(fields, "published_at"))
     }
