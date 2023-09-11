@@ -25,14 +25,9 @@
             <div class="w-1/5 sm:text-center lg:text-left">
               <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div class="rounded-md shadow">
-<<<<<<< Updated upstream
-                  <p><%= @article.description %></p>
-                  <p>Delaytime: <%= @article.delaytime %></p>
-=======
                   <b><%= @article.description %></b>
                   <br />
                   <b>Delaytime: <%= @article.delaytime %> </b>
->>>>>>> Stashed changes
                 </div>
               </div>
             </div>
