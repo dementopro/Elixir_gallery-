@@ -17,7 +17,8 @@ defmodule AlzhmrPhotoWeb.Router do
   scope "/", AlzhmrPhotoWeb do
     pipe_through :browser
     live "/", PageLive
-    live "/articles", ArticlesLive
+    live "/photoframe", ArticlesLive
+    live "/photoframe/:id", ArticlesLive
 
     live "/articles/:id/:slug", ShowArticleLive
 

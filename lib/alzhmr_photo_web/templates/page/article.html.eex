@@ -1,4 +1,4 @@
-<div class="flex justify-around items-center article-number article-number-<%= @counter %> <%= if @counter == 0, do: 'active', else: 'hidden' %>">
+<div class="flex justify-around items-center article-number article-number-<%= @counter %> <%= if @counter == 0, do: 'active', else: 'hidden' %>" data-delaytime="<%= @article.delaytime %>">
   <span class="p-3 border rounded-full shadow-lg cursor-pointer prev-btn">
     <?xml version="1.0" encoding="iso-8859-1"?>
       <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->

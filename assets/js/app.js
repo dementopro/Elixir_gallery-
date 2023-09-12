@@ -64,14 +64,22 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+async function demo() {
+  let curr_article = $(".article-number.active");
+  let delaytime = $(curr_article).data('delaytime');
+  await sleep(delaytime * 1000);
+  showNext();
+  console.log('Done');
+}
 
 $(function(){
   $(".next-btn").on('click', showNext);
   $(".prev-btn").on('click', showPrevious);
-  setInterval(() => {
-    showNext();
-  }, 3000);
+  demo();
 })
 
 
@@ -102,4 +110,5 @@ function showNext() {
   curr_article.toggleClass("hidden");
   $(next).toggleClass("hidden");
   $(next).toggleClass("active");
+  demo();
 }
